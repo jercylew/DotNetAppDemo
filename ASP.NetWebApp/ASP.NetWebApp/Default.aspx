@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="ASP.NetWebApp._Default" %>
+﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" MaintainScrollPositionOnPostback="true" Inherits="ASP.NetWebApp._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -36,6 +36,31 @@
             <p>
                 <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
             </p>
+        </div>
+
+        <div class="col-md-4">
+            <h2>Event Handling Demo</h2>
+            <div>
+                <asp:Label runat="server" id="HelloWorldLabel"></asp:Label>
+                <br /><br />
+                <asp:TextBox runat="server" id="TextInput" /> 
+                &nbsp;&nbsp; 
+                <asp:Button runat="server" id="GreetButton" text="Say Hello!" OnClick="GreetButton_Click" />
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <h2>Updatepanel Demo</h2>
+            <p>In an updatepanel the control can be updated partially without refreshing the whole page</p>
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                <ContentTemplate>
+                    <asp:Label runat="server" id="m_lblGreetText"></asp:Label>
+                    <br /><br />
+                    <asp:TextBox runat="server" id="m_txtName" /> 
+                    &nbsp;&nbsp; 
+                    <asp:Button runat="server" id="m_btnGreet" text="Say Hello!" OnClick="m_btnGreet_Click" />
+                </ContentTemplate>
+            </asp:UpdatePanel>
         </div>
     </div>
 

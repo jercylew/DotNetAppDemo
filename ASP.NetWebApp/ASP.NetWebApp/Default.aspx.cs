@@ -13,5 +13,15 @@ namespace ASP.NetWebApp
         {
 
         }
+
+        protected void GreetButton_Click(object sender, EventArgs e)
+        {
+            HelloWorldLabel.Text = "Hello " + TextInput.Text;
+        }
+
+        protected void m_btnGreet_Click(object sender, EventArgs e)
+        {
+            m_lblGreetText.Text = "Hello " + m_txtName.Text;
+        }
     }
 }
