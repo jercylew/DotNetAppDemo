@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" MaintainScrollPositionOnPostback="true" Inherits="ASP.NetWebApp._Default" %>
+<%@ Register TagPrefix="My" TagName="UserInfoBoxControl" Src="~/UserInfoBoxControl.ascx" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -47,6 +48,11 @@
                 &nbsp;&nbsp; 
                 <asp:Button runat="server" id="GreetButton" text="Say Hello!" OnClick="GreetButton_Click" />
             </div>
+        </div>
+
+        <div class="col-md-4">
+            <h2>User Control Demo</h2>
+            <My:UserInfoBoxControl runat="server" ID="MyUserInfoBoxControl" UserName="John Doe" UserAge="45" UserCountry="Australia" />
         </div>
 
         <div class="col-md-4">
